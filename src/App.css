@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
+	--c-green: #009b53;
+	--c-red: #e94a0c;
+	--c-black: #121212;
+	--c-lightgray: #eee8e8;
+
 	--box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -15,7 +20,8 @@ body {
 }
 
 body {
-	font-size: 18px;
+	font-size: 16px;
+	color: #666666;
 	background-color: #f7f7f7;
 	font-family: 'Lato', sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -23,8 +29,13 @@ body {
 }
 
 .container {
-	margin: 30px auto;
-	width: 350px;
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+.app {
+	position: relative;
+	min-height: 100vh;
 }
 
 h1 {
