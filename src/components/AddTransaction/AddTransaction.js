@@ -13,6 +13,7 @@ const AddTransaction = () => {
   };
   return (
     <div className={styles.addTransaction}>
+      <h4>Add Transaction</h4>
       <form onSubmit={onSubmit}>
         <div className={styles.formControl}>
           <div className={styles.select}>
@@ -40,8 +41,8 @@ const AddTransaction = () => {
             value={amount}
             onChange={e => setAmount(e.target.value)}
           />
+          <input type="submit" value="Add" />
         </div>
-        <input type="submit" value="Add" hidden />
       </form>
     </div>
   );

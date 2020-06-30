@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
+	--c-primary: #361ea0;
+
 	--c-green: #009b53;
 	--c-red: #e94a0c;
 	--c-black: #121212;
