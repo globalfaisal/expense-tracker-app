@@ -1,0 +1,22 @@
+{
+	"transactions": [
+		{
+			"id": 1,
+			"type": "expense",
+			"text": "Fix my phone",
+			"amount": 180
+		},
+		{
+			"id": 2,
+			"type": "income",
+			"text": "Salary",
+			"amount": 400
+		},
+		{
+			"id": 3,
+			"type": "expense",
+			"text": "Fuel",
+			"amount": 20
+		}
+	]
+}
