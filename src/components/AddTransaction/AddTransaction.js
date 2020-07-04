@@ -1,48 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { GlobalContext } from '../../context/GlobalContext';
+import InputField from '../InputField/InputField';
 
 import styles from './AddTransaction.module.scss';
 
 const AddTransaction = () => {
-  const [type, setType] = useState('income');
-  const [name, setName] = useState('');
-  const [amount, setAmount] = useState(0);
+  const { addTransaction } = useContext(GlobalContext);
+  const [text, setText] = useState('');
+  const [amount, setAmount] = useState('');
+
+  const resetForm = () => {
+    setText('');
+    setAmount('');
+  };
 
   const onSubmit = e => {
     e.preventDefault();
-    console.log(type, name, amount);
+    const newTransaction = {
+      id: uuidv4(),
+      text,
+      amount: +amount,
+      created_at: new Date().toISOString(),
+    };
+    addTransaction(newTransaction);
+    resetForm();
   };
+
   return (
     <div className={styles.addTransaction}>
-      <h4>Add Transaction</h4>
+      <h4 style={{ marginBottom: '22px' }}>Add New Transaction</h4>
       <form onSubmit={onSubmit}>
         <div className={styles.formControl}>
-          <div className={styles.select}>
-            <select
-              name="type"
-              value={type}
-              onChange={e => setType(e.target.value)}
-            >
-              <option value="income">Income</option>
-              <option value="expense">Expense</option>
-            </select>
-          </div>
-          <input
-            name="name"
+          <InputField
+            name="text"
             type="text"
-            placeholder="Transaction name"
-            value={name}
-            onChange={e => setName(e.target.value)}
+            placeholder="What transaction?"
+            value={text}
+            onChange={e => setText(e.target.value)}
+            className={styles.inputText}
           />
-          <input
+          <InputField
             name="amount"
             type="number"
             placeholder="Amount"
-            className={styles.inputAmount}
             value={amount}
             onChange={e => setAmount(e.target.value)}
+            className={styles.inputAmount}
+            helperText="Positive for income | Negative for expense"
           />
-          <input type="submit" value="Add" />
         </div>
+        <input type="submit" hidden />
       </form>
     </div>
   );

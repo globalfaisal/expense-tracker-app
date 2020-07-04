@@ -1,0 +1,24 @@
+.inputField {
+	display: flex;
+	flex-direction: column;
+	input {
+		font-size: 1em;
+		padding: 16px 8px;
+		background-color: #ffffff;
+		border: 1px solid #dddddd;
+		border-bottom: 2px solid #dddddd;
+		&:focus {
+			outline: 0;
+			border-bottom-color: var(--c-primary);
+		}
+		&::placeholder {
+			color: #c4c4c4;
+		}
+	}
+}
+
+.helperText {
+	font-size: 10px;
+	margin: 4px 0;
+	color: #929292;
+}

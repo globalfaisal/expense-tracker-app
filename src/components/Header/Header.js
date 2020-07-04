@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Balance from '../Balance/Balance';
 import IncomeAndExpenses from '../IncomeAndExpenses/IncomeAndExpenses';
 

@@ -1,22 +1,10 @@
 {
-	"transactions": [
-		{
-			"id": 1,
-			"type": "expense",
-			"text": "Fix my phone",
-			"amount": 180
-		},
-		{
-			"id": 2,
-			"type": "income",
-			"text": "Salary",
-			"amount": 400
-		},
-		{
-			"id": 3,
-			"type": "expense",
-			"text": "Fuel",
-			"amount": 20
-		}
-	]
+  "transactions": [
+    {
+      "id": "07b6ad4e-cc00-4699-81ad-f0a92a25612c",
+      "text": "Salaray",
+      "amount": 4000,
+      "created_at": "2020-07-04T16:29:28.200Z"
+    }
+  ]
 }

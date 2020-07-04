@@ -23,21 +23,12 @@ body {
 
 body {
 	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Inter', sans-serif;
 	color: #666666;
-	background-color: #f7f7f7;
-	font-family: 'Lato', sans-serif;
+	background-color: #f0f0f0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-	max-width: 680px;
-	margin: 0 auto;
-}
-
-.app {
-	position: relative;
-	min-height: 100vh;
 }
 
 h1 {
@@ -54,4 +45,20 @@ h3 {
 h4 {
 	margin: 0;
 	text-transform: uppercase;
+}
+
+.container {
+	max-width: 1240px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0 auto;
+}
+
+.app {
+	position: relative;
+	min-height: 100vh;
+}
+
+main {
+	margin: 80px auto 40px auto;
 }

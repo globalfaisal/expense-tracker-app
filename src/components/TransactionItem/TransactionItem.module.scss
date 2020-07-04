@@ -1,0 +1,57 @@
+.transactionItem {
+	position: relative;
+	display: flex;
+	list-style-type: none;
+	padding: 10px 0px 10px 16px;
+	border-right: 3px solid transparent;
+	&:hover {
+		background-color: #eeeeee;
+		.btnDelete {
+			opacity: 1;
+			visibility: visible;
+			right: 8px;
+		}
+	}
+
+	&:nth-last-of-type(odd) {
+		background-color: #f8f7f7;
+	}
+}
+
+.text {
+	flex: 1;
+}
+.amount {
+	min-width: 100px;
+	margin-left: 32px;
+	margin-right: 32px;
+}
+
+.icon {
+	max-width: 22px;
+	max-height: 22px;
+}
+
+.inc {
+	border-color: var(--c-green);
+}
+.exp {
+	border-color: var(--c-red);
+}
+
+.btnDelete {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	right: -4px;
+	transform: translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+	fill: #555555;
+	transition: all 300ms ease;
+	&:hover {
+		fill: var(--c-red);
+	}
+}
